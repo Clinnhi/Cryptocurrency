@@ -12,6 +12,7 @@ import {
 } from "./components";
 
 import "./App.css";
+import CryptoTracker from "./components/CryptoTracker";
 
 const App = () => {
   return (
@@ -38,6 +39,9 @@ const App = () => {
               <Route exact path="/news">
                 <News />
               </Route>
+              <Route exact path="/cryptotracker">
+                <CryptoTracker />
+              </Route>
             </Switch>
           </div>
         </Layout>
@@ -49,10 +53,11 @@ const App = () => {
             Cryptoverse <br />
             All rights reserved
           </Typography.Title>
-          <Space>
+           <Space>
             <Link to="/">Home</Link>
             <Link to="/exchanges">Exchanges</Link>
             <Link to="/news">News</Link>
+            <Link to="/cryptotracker">Crypto Tracker</Link>
           </Space>
         </div>
       </div>

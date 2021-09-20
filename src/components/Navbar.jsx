@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Button, Menu, Typography, Avatar } from "antd";
 import { Link } from "react-router-dom";
 
-import HomeOutlined, { MenuOutlined } from "@ant-design/icons";
-import FundOutlined from "@ant-design/icons";
-import MoneyCollectOutlined from "@ant-design/icons";
-import BulbOutlined from "@ant-design/icons";
+import {
+  MenuOutlined,
+  HomeOutlined,
+  FundOutlined,
+  MoneyCollectOutlined,
+  BulbOutlined,
+} from "@ant-design/icons";
 
 import icon from "../images/cryptocurrency.png";
 
@@ -47,7 +50,9 @@ const Navbar = () => {
       {activeMenu && (
         <Menu theme="dark">
           <Menu.Item icon={<HomeOutlined />}>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              Home 
+            </Link>
           </Menu.Item>
           <Menu.Item icon={<FundOutlined />}>
             <Link to="/cryptocurrencies">Cryptocurrencies</Link>
@@ -57,6 +62,9 @@ const Navbar = () => {
           </Menu.Item>
           <Menu.Item icon={<BulbOutlined />}>
             <Link to="/news">News</Link>
+          </Menu.Item>
+          <Menu.Item icon={<BulbOutlined />}>
+            <Link to="/cryptotracker">Coin Tracker</Link>
           </Menu.Item>
         </Menu>
       )}
